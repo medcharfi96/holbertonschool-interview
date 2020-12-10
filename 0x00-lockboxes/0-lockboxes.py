@@ -13,9 +13,9 @@ def canUnlockAll(boxes):
 
     cle = [0]
     while i in len(boxes):
-        for j in boxes[k]:
-            if j not in list and j < len(boxes.max()):
-                cle.append(j)
+        for za in boxes[i]:
+            if za not in cle and za < len(boxes):
+                cle.append(za)
     i += 1
     if len(cle) == len(boxes):
         return True
