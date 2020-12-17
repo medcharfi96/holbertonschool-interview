@@ -43,11 +43,6 @@ listint_t *insert_node(listint_t **head, int number)
 		tmp2 = tmp;
 		tmp = tmp->next;
 	}
-	printf("ras zebiiiiiiiiiiiiiiiii");
-	printf("%d", tmp->n);
-	printf("%d", tmp2->n);
-
-	printf("ras zebiiiiiiiiiiiiiiiii");
 	new->next = tmp;
 	tmp2->next = new;
 
