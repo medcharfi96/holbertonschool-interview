@@ -1,10 +1,10 @@
 #include "sandpiles.h"
-/*
-* chek_grid - check if grid is ok
-* @grid1: sandpiles
-*
-* Return: int( 1 mean true)
-*/
+
+/**
+ *chek_grid - pour verif de grid
+ *@grid1: matrice
+ *Return: int(mean true)
+ */
 int chek_grid(int grid1[3][3])
 {
 	for (int i = 0; i < 3; i++)
@@ -20,12 +20,11 @@ int chek_grid(int grid1[3][3])
 	}
 	return (1);
 }
-/*
- * sallah_grid - Function corection of addition of grid
- * @grid1: sandpiles
- *
- * Return: nothing(mean true)
-*/
+/**
+ *sallah_grid - fonction de rectification de grid
+ *@grid1: matrice
+ *Return: void(mean true)
+ */
 void sallah_grid(int grid1[3][3])
 {
 	int i, j;
@@ -50,13 +49,12 @@ void sallah_grid(int grid1[3][3])
 
 	}
 }
-/*
- * sandpiles_sum - Function main addition of grid
- * @grid1: sandpiles
- * @grid2: sandpiles
- *
- * Return: nothing(mean true)
-*/
+/**
+ *sandpiles_sum - main function
+ *@grid1: matrice
+ *@grid2: matrice
+ *Return: nothing(mean true)
+ */
 void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
 	int i, j;
