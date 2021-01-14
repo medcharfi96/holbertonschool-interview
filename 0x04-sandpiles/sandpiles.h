@@ -1,5 +1,5 @@
-#ifndef _sandp_H_
-#define _sandp_H_
+#ifndef _sandpiles_H_
+#define _sandpiles_H_
 #include <stdio.h>
 #include <stdlib.h>
 int chek_grid(int grid1[3][3]);
