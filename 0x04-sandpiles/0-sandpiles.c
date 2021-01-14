@@ -41,12 +41,10 @@ void sallah_grid(int grid1[3][3])
 					grid1[i][j + 1] = grid1[i][j + 1] + 1;
 				if (j - 1 > -1)
 					grid1[i][j - 1] = grid1[i][j - 1] + 1;
-
 				if (i + 1 < 3)
 					grid1[i + 1][j] = grid1[i + 1][j] + 1;
 				if (i - 1 > -1)
 					grid1[i - 1][j] = grid1[i - 1][j] + 1;
-;
 			}
 		}
 
