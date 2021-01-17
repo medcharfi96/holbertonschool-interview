@@ -8,9 +8,10 @@
  */
 int chek_grid(int grid1[3][3])
 {
-for (int i = 0; i < 3; i++)
+int i, j;
+for (i = 0; i < 3; i++)
 {
-for (int j = 0; j < 3; j++)
+for (j = 0; j < 3; j++)
 {
 if (grid1[i][j] > 3)
 {
@@ -57,13 +58,13 @@ grid1[i - 1][j] = grid1[i - 1][j] + 1;
  */
 void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
-int i, j;
+int i, j, count, counte;
 
-for (int i = 0; i < 3; i++)
+for (count = 0; count < 3; count++)
 {
-for (int j = 0; j < 3; j++)
+for (counte = 0; counte < 3; counte++)
 {
-grid1[i][j] = grid2[i][j] + grid1[i][j];
+grid1[count][counte] = grid2[count][counte] + grid1[count][counte];
 }
 }
 while (!chek_grid(grid1))
