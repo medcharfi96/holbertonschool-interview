@@ -27,8 +27,8 @@ int is_palindrome(listint_t **head)
 		len++;
 		pd = pd->next;
 	}
-	if (len == 1)
-		return (0);
+	if (len == 1 || len == 0)
+		return (1);
 	while (j < len)
 	{
 		tab[j] = (*head)->n;
