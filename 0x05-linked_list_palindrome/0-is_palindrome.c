@@ -31,13 +31,14 @@ int is_palindrome(listint_t **head)
 {
 	int i;
 	int j;
-	int len = longueur_list(head);
+	int len;
 	int tab[len];
 	int bol;
 
 	i = 0;
 	j = 0;
 	bol = 1;
+	len = longueur_list(head);
 	if (len == 1)
 	{
 		return (0);
