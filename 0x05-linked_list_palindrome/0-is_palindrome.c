@@ -11,11 +11,8 @@
  */
 int is_palindrome(listint_t **head)
 {
-	int i;
-	int j;
-	int len;
-	int tab[1000];
-	int bol;
+	int i, j, len, bol;
+	int tab[8000];
 	listint_t *pd = *head;
 
 	i = 0;
