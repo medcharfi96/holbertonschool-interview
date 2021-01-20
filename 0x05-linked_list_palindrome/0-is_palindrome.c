@@ -1,25 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
-/**
- * longueur_list - give the list lenght
- * @p: copy of head
- * Return: int(mean true)
- *
- */
-int longueur_list(listint_t **p)
-{
-	int i;
-	listint_t *pd = *p;
 
-	i = 1;
-	while (pd->next != NULL)
-	{
-		i++;
-		pd = pd->next;
-	}
-	return (i);
-}
 
 /**
  * is_palindrome - check  if is palindrome
@@ -32,17 +14,21 @@ int is_palindrome(listint_t **head)
 	int i;
 	int j;
 	int len;
-	int tab[len];
+	int tab[1000];
 	int bol;
+	listint_t *pd = *head;
 
 	i = 0;
 	j = 0;
 	bol = 1;
-	len = longueur_list(head);
-	if (len == 1)
+	len = 0;
+	while (pd != NULL)
 	{
-		return (0);
+		len++;
+		pd = pd->next;
 	}
+	if (len == 1)
+		return (0);
 	while (j < len)
 	{
 		tab[j] = (*head)->n;
@@ -61,8 +47,6 @@ int is_palindrome(listint_t **head)
 		}
 	}
 	if (bol == 0)
-	{
 		return (0);
-	}
 	return (1);
 }
