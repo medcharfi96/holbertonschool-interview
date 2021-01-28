@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" task  first """
-import sys
+""" des """
+from sys import stdin as stdina
 
 
 codet = {'200': 0, '301': 0, '400': 0, '401': 0,
@@ -9,17 +9,15 @@ compteur = 0
 tll = 0
 
 try:
-    for l in sys.stdin:
+    for l in stdina:
         data = l.split(" ")
         if len(data) > 2:
             compteur += 1
             if compteur <= 10:
                 tll += int(data[::-1])
                 ras_zeb = data[-2]
-
             if ras_zeb in codet.keys():
                 codet[ras_zeb] += 1
-
             if compteur % 10 == 0:
                 print('File size: {}'.format(tll))
                 for num_err, mch in codet.items():
