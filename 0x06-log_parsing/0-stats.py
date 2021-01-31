@@ -20,7 +20,7 @@ try:
                 codet[ras_zeb] += 1
             if compteur % 10 == 0:
                 print('File size: {}'.format(tll))
-                for num_err, mch in codet.items():
+                for num_err, mch in sorted(codet.items()):
                     if mch > 0:
                         print('{}: {}'.format(num_err, mch))
                 counter = 0
@@ -28,6 +28,6 @@ except KeyboardInterrupt:
     pass
 finally:
     print('File size: {}'.format(tll))
-    for num_err, mch in codet.items():
+    for num_err, mch in sorted(codet.items()):
         if mch > 0:
             print('{}: {}'.format(num_err, mch))
