@@ -9,8 +9,9 @@ compteur = 0
 tll = 0
 
 try:
-    for l in enumerate(sys.stdin, 1):
+    for l in sys.stdin:
         data = l.split()
+        data = data[::1]
         if len(data) > 2:
             compteur += 1
             if compteur <= 10:
