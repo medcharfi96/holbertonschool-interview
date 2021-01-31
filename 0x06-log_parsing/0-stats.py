@@ -3,28 +3,39 @@
 import sys
 
 
-codet = {'200': 0, '301': 0, '400': 0, '401': 0,
-         '403': 0, '404': 0, '405': 0, '500': 0}
-tll = 0
+status_codes = {
+    "200": 0,
+    "301": 0,
+    "400": 0,
+    "401": 0,
+    "403": 0,
+    "404": 0,
+    "405": 0,
+    "500": 0}
+compteur = 0
+taille = 0
 
 try:
-    for x, line in enumerate(sys.stdin, 1):
-        s_l = line.split()
-        s_l = s_l[::-1]
-        if len(s_l) > 2:
-            stat_c = s_l[0]
-            tll += int(s_l[len(s_l) - 1])
-            if stat_c in codet.keys():
-                codet[stat_c] += 1
-        if x == 10:
-            print("File size: {}".format(tll))
-            for k, val in sorted(codet):
-                if val > 0:
-                    print("{}: {}".format(k, val))
-except KeyboardInterrupt:
-    pass
+    for ligne in sys.stdin:
+        info = ligne.split()
+        info = info[::-1]
+
+        if len(info) > 2:
+            compteur = compteur + 1
+            if compteur <= 10:
+                code = info[1]
+                taille += int(info[0])
+            if code in status_codes:
+                status_codes[str(code)] = status_codes[str(code)] + 1
+
+            if compteur % 10 == 0:
+                print('File size: {}'.format(taille))
+                for s in sorted(status_codes):
+                    if status_codes[s] != 0:
+                        print('{}: {}'.format(s, status_codes[s]))
+                compteur = 0
 finally:
-    print('File size: {:d}'.format(tll))
-    for k, val in sorted(codet.keys()):
-        if val != 0:
-            print("{}: {:d}".format(k, val))
+    print('File size: {}'.format(taille))
+    for s in sorted(status_codes):
+        if status_codes[s] != 0:
+            print('{}: {}'.format(s, status_codes[s]))
