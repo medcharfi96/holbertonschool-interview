@@ -10,7 +10,7 @@ tll = 0
 try:
     for x, line in enumerate(sys.stdin, 1):
         s_l = line.split()
-		s_l = s_l[::-1]
+        s_l = s_l[::-1]
         if len(s_l) > 2:
             stat_c = s_l[0]
             tll += int(s_l[len(s_l) - 1])
