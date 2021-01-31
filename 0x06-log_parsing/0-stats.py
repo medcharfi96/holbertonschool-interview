@@ -15,7 +15,7 @@ try:
             compteur += 1
             if compteur <= 10:
                 tll += int(data[0])
-                ras_zeb = data[-2]
+                ras_zeb = data[1]
             if ras_zeb in codet.keys():
                 codet[ras_zeb] += 1
             if compteur % 10 == 0:
