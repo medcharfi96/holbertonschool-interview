@@ -11,10 +11,10 @@ try:
     for x, line in enumerate(sys.stdin, 1):
         s_l = line.split()
         if len(s_l) > 2:
-            statuscode = s_l[len(s_l) - 2]
+            stat_c = s_l[len(s_l) - 2]
             tll += int(s_l[len(s_l) - 1])
-            if statuscode in codet:
-                codet[statuscode] += 1
+            if stat_c in codet:
+                codet[str(stat_c)] += 1
         if x == 10:
             print("File size: {}".format(tll))
             for k, val in sorted(codet):
