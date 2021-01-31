@@ -14,7 +14,7 @@ try:
         if len(data) > 2:
             compteur += 1
             if compteur <= 10:
-                tll += int(data[::-1])
+                tll += int(data[0])
                 ras_zeb = data[-2]
             if ras_zeb in codet.keys():
                 codet[ras_zeb] += 1
