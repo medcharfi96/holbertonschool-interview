@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ des """
-from sys import stdin as stdina
+import sys
 
 
 codet = {'200': 0, '301': 0, '400': 0, '401': 0,
@@ -9,8 +9,8 @@ compteur = 0
 tll = 0
 
 try:
-    for l in stdina:
-        data = l.split(" ")
+    for l in sys.stdin:
+        data = l.split()
         if len(data) > 2:
             compteur += 1
             if compteur <= 10:
