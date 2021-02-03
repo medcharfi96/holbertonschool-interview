@@ -12,9 +12,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *list_f, *list_s;
 
-	if (list->next == NULL)
-		return (0);
-	if (list == NULL)
+	if (list->next == NULL || list == NULL)
 		return (0);
 
 	list_f = list;
