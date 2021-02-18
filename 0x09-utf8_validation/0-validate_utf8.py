@@ -8,8 +8,6 @@ def validUTF8(data):
     :rtype: bool
     """
     nbr_b = 0
-    test1 = 1 << 7
-    test2 = 1 << 6
     for count in data:
         mask = 1 << 7
         if nbr_b == 0:
