@@ -28,8 +28,9 @@ void menger(int level)
 	taille = pow(3, level);
 	}
 
-	while (i < taille)
+	while ( i < taille)
 	{
+		j = 0;
 		while (j < taille)
 		{
 			larguere = j;
@@ -42,10 +43,10 @@ void menger(int level)
 				hauteur = hauteur / 3;
 				larguere = larguere / 3;
 			}
-			j++;
 			printf("%c", style);
+			j++;
 		}
-		i++;
 		printf("\n");
+		i++;
 	}
 }
