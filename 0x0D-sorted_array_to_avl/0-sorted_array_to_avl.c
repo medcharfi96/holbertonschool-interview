@@ -1,10 +1,10 @@
 #include "binary_trees.h"
 
 /**
-* sorted_array_to_avl - Function that builds an AVL tree from an array
-* @array: is a pointer to the first element of the array to be converted
-* @size: is the number of element in the array
-* Return: a pointer to the root node of the created AVL tree, otherwise NULL
+* sorted_array_to_avl - fonction de creation darbre
+* @array: int
+* @size: size_t
+* Return: int(mean true)
 */
 
 avl_t *sorted_array_to_avl(int *array, size_t size)
@@ -20,12 +20,12 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
 
 
 /**
-* ajout_noeud - Function that build an AVL tree from an array
-* @array: is a pointer to the first element of the array to be converted
-* @start: the first element array index
-* @end: the last element array to eval
-* @parent: is a ponter to the parent of the new node
-* Return: binary tree, otherwise NULL
+* ajout_noeud - creation darbre
+* @array: int
+* @debut: size_t
+* @fin: size_t
+* @parent: pointeur
+* Return: pointeur(mean true)
 */
 avl_t *ajout_noeud(size_t debut, avl_t *parent, size_t fin, int *array)
 {
@@ -41,19 +41,19 @@ avl_t *ajout_noeud(size_t debut, avl_t *parent, size_t fin, int *array)
 		return (NULL);
 
 	if (milieu != fin)
-		arbre->right = ajout_noeud(array, milieu + 1, fin, arbre);
+		arbre->right = ajout_noeud(milieu + 1, arbre, fin, array);
 
 	if (milieu != debut)
-		arbre->left = ajout_noeud(array, debut, milieu - 1, arbre);
+		arbre->left = ajout_noeud(debut, arbre, milieu - 1, array);
 
 	return (arbre);
 }
 
 /**
-* nvx_noeud - Function to create a new node
-* @parent: is a ponter to the array
-* @n: size of the array
-* Return: the pointer of the node, otherwise NULL
+* nvx_noeud - creation de nouveau noeud
+* @parent: pointeur
+* @n: int
+* Return: noeud(mean true)
 */
 avl_t *nvx_noeud(avl_t *parent, size_t n)
 {

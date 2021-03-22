@@ -28,4 +28,4 @@ avl_t *nvx_noeud(avl_t *parent, size_t n);
 avl_t *sorted_array_to_avl(int *array, size_t size);
 void binary_tree_print(const binary_tree_t *tree);
 
-#endif /* BINARY_TREES_H */
+#endif
