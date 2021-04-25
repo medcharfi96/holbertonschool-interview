@@ -58,7 +58,7 @@ void heap_sort(int *array, size_t size)
 
 	if (array == NULL || size <= 1)
 		return;
-	for (maxi = ((size - 1) / 2) ; maxi >= 0; maxi--)
+	for (maxi = ((size / 2 - 1) ; maxi >= 0; maxi--)
 		heap(array, size, maxi, size);
 	for (maxi = (size - 1); maxi > 0; maxi--)
 	{
