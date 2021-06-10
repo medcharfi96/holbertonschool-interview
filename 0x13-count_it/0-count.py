@@ -39,8 +39,8 @@ def count_words(subreddit, word_list, hot_list=[], init=0, after="null"):
             if len(retour) != 0:
                 i = 0
                 while i < len(retour) - 1:
-                    if retour[i + 1][0] is not None and
-                    retour[i][0] == retour[i + 1][0]:
+                    if retour[i + 1][0] is not \
+                            None and retour[i][0] == retour[i + 1][0]:
                         retour[i][1] += retour[i + 1][1]
                         retour.pop(i + 1)
                         retour.append([None, None])
