@@ -11,11 +11,11 @@ def makeChange(coins, total):
     coin.sort()
     coin.reverse()
     op = 0
-    for j in coin:
-        if int(total / j) > 0:
+    for j in coins:
+        if int(total // j) > 0:
             op += int(total / j)
-            total -= j * op
+            total = total % j
 
-        if total == 0:
-            return op
+    if total == 0:
+        return op
     return -1
